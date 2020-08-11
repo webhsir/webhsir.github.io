@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background-color: #d5d3d4;
+      }
+
+      .container {
+        width: 500px;
+        height: 500px;
+        position: relative;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 5px #c2bfbf;
+      }
+      #myCanvas {
+        border: 1px solid #000;
+        position: relative;
+        top: 50px;
+        left: 50px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        animation: myfirst 30s linear infinite;
+      }
+      @keyframes myfirst {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <canvas id="myCanvas" width="400" height="400"></canvas>
+    </div>
+    <script>
+      window.onload = function () {
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(200, 100, 100, -0.5 * Math.PI, 0.5 * Math.PI, false);
+        ctx.arc(200, 300, 100, 1.5 * Math.PI, 0.5 * Math.PI, true);
+        ctx.arc(200, 200, 200, 0.5 * Math.PI, 1.5 * Math.PI, false);
+        ctx.closePath();
+        ctx.fillStyle = "black";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(200, 100, 25, 0 * Math.PI, 2 * Math.PI, false);
+        ctx.fillStyle = "white";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(200, 300, 25, 0 * Math.PI, 2 * Math.PI, false);
+        ctx.fillStyle = "black";
+        ctx.fill();
+      };
+    </script>
+  </body>
+</html>
