@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.108b60e1a2686cb0aa3c79286ebeeaf0.js"
+  "/precache-manifest.b259c2cd24f5c10f6956cf58139cba27.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "myvuemockaxiosapp"});
+workbox.core.setCacheNameDetails({prefix: "hsirgitpro"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
