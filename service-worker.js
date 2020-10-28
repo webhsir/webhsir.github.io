@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.d5aede3e8d33fcc05dc8f8937f0afe9f.js"
+  "/precache-manifest.e6246f71771ed3e7f8a43be6b17b300a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "hsirgitpro"});
